@@ -17,6 +17,11 @@ const noPlay = function() {
   synth.triggerRelease();
 };
 
+document.querySelector('#startTone').addEventListener('click', async () => {
+  await Tone.start();
+  console.log('audio is ready');
+});
+
 document.querySelector('#noteOn').addEventListener('mousedown', play);
 document.querySelector('#noteOn').addEventListener('mouseup', noPlay);
 
